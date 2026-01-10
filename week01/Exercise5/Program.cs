@@ -9,7 +9,6 @@ int squared = SquareNumber(number);
 
 DisplayResult(name, squared);
 
-// ---------------- FUNCTIONS ----------------
 
 static void DisplayWelcome()
 {

@@ -1,0 +1,16 @@
+public class SimpleGoal : Goal
+{
+    private bool _isComplete;
+
+    public SimpleGoal(string name, string description, int points) : base(name, description, points)
+    {
+        _isComplete = false;
+    }
+
+
+    public void SetComplete(bool status) => _isComplete = status;
+
+    public override void RecordEvent() => _isComplete = true; // 
+    public override bool IsComplete() => _isComplete;
+    public override string GetSaveString() => $"SimpleGoal|{_shortName}|{_description}|{_points}|{_isComplete}";
+}
